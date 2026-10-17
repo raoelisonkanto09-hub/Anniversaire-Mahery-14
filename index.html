@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joyeux Anniversaire Mahery !</title>
+  
+  <!-- Relie ton fichier CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    
+    <!-- ÉCRAN 1 : Question initiale -->
+    <div id="screen-1" class="screen active">
+      <h1 class="title">Hé TOI🫵, oui toi😑.</h1>
+      <p class="subtitle">Tu veux savoir quelque chose ?</p>
+      <div class="button-group">
+        <button class="btn btn-yes" onclick="goToScreen('screen-special')">Oui, je veux savoir !</button>
+        <button class="btn btn-no" onclick="goToScreen('screen-error-1')">Non, je ne veux rien savoir</button>
+      </div>
+    </div>
+
+    <!-- ÉCRAN 2 (Piège 1) -->
+    <div id="screen-error-1" class="screen">
+      <h1 class="title">Oups ! 😅</h1>
+      <p class="subtitle">Tu t'es trompé de bouton... t'inquiète, c'est humain !</p>
+      <div class="button-group">
+        <button class="btn btn-yes" onclick="goToScreen('screen-special')">Oui, je veux savoir !</button>
+      </div>
+    </div>
+
+    <!-- ÉCRAN 3 : Jour spécial -->
+    <div id="screen-special" class="screen">
+      <h1 class="title">Aujourd'hui... 🤔</h1>
+      <p class="subtitle">C'est un jour très spécial pour quelqu'un !</p>
+      <div class="button-group">
+        <button class="btn btn-yes" onclick="goToScreen('screen-mahery')">Continuer ➡️</button>
+        <button class="btn btn-no" onclick="goToScreen('screen-error-2')">Ignorer 🙈</button>
+      </div>
+    </div>
+
+    <!-- ÉCRAN 4 (Piège 2) -->
+    <div id="screen-error-2" class="screen">
+      <h1 class="title">Sérieusement ? 😜</h1>
+      <p class="subtitle">On n'ignore pas un jour spécial comme ça ! Allez, clique ci-dessous😒 :</p>
+      <div class="button-group">
+        <button class="btn btn-yes" onclick="goToScreen('screen-mahery')">Continuer ➡️</button>
+      </div>
+    </div>
+
+    <!-- ÉCRAN 5 : Révélation du prénom -->
+    <div id="screen-mahery" class="screen">
+      <h1 class="title">Eh oui ! ✨</h1>
+      <p class="subtitle">C'est ton anniversaire <strong>Mahery</strong> !</p>
+      <div class="button-group">
+        <button class="btn btn-yes" onclick="goToScreen('screen-vieillesse')">Continuer 🚀</button>
+        <button class="btn btn-no" onclick="goToScreen('screen-error-3')">Ignorer 🙈</button>
+      </div>
+    </div>
+
+    <!-- ÉCRAN 6 (Piège 3) -->
+    <div id="screen-error-3" class="screen">
+      <h1 class="title">Raté ! 😆</h1>
+      <p class="subtitle">Tu ne peux pas échapper à la fête, Mahery !</p>
+      <div class="button-group">
+        <button class="btn btn-yes" onclick="goToScreen('screen-vieillesse')">Continuer ➡️</button>
+      </div>
+    </div>
+
+    <!-- ÉCRAN 7 : Année de vieillesse -->
+    <div id="screen-vieillesse" class="screen">
+      <h1 class="title">Une année de plus...</h1>
+      <p class="subtitle">Une année de vieillesse de plus. 👴😂</p>
+      <div class="button-group">
+        <button class="btn btn-yes" onclick="goToScreen('screen-14ans')">Continuer ➡️</button>
+        <button class="btn btn-no" onclick="goToScreen('screen-error-4')">Ignorer 🙈</button>
+      </div>
+    </div>
+
+    <!-- ÉCRAN 8 (Piège 4) -->
+    <div id="screen-error-4" class="screen">
+      <h1 class="title">Non non non ! 🛑</h1>
+      <p class="subtitle">Tu es obligé de lire la suite !</p>
+      <div class="button-group">
+        <button class="btn btn-yes" onclick="goToScreen('screen-14ans')">Continuer ➡️</button>
+      </div>
+    </div>
+
+    <!-- ÉCRAN 9 : 14 ans avec nous -->
+    <div id="screen-14ans" class="screen">
+      <h1 class="title">14 ans déjà ! 🎉</h1>
+      <p class="subtitle">Cela fait 14 ans maintenant que tu es avec nous.</p>
+      <div class="button-group">
+        <button class="btn btn-yes" onclick="goToScreen('screen-temps')">Continuer ➡️</button>
+        <button class="btn btn-no" onclick="goToScreen('screen-error-5')">Ignorer 🙈</button>
+      </div>
+    </div>
+
+    <!-- ÉCRAN 10 (Piège 5) -->
+    <div id="screen-error-5" class="screen">
+      <h1 class="title">Où tu vas comme ça ? 🏃‍♂️</h1>
+      <p class="subtitle">Reviens par ici🤦 !</p>
+      <div class="button-group">
+        <button class="btn btn-yes" onclick="goToScreen('screen-temps')">Continuer ➡️</button>
+      </div>
+    </div>
+
+    <!-- ÉCRAN 11 : Le temps passe vite -->
+    <div id="screen-temps" class="screen">
+      <h1 class="title">Tic tac... ⏰</h1>
+      <p class="subtitle">Le temps passe vite, tu ne trouves pas ?</p>
+      <div class="button-group">
+        <button class="btn btn-yes" onclick="goToScreen('screen-grandis')">Continuer ➡️</button>
+      </div>
+    </div>
+
+    <!-- ÉCRAN 12 : Aujourd'hui encore -->
+    <div id="screen-grandis" class="screen">
+      <h1 class="title">🌱</h1>
+      <p class="subtitle">Aujourd'hui encore tu grandis.</p>
+      <div class="button-group">
+        <button class="btn btn-yes" onclick="goToScreen('screen-bien')">Continuer ➡️</button>
+        <button class="btn btn-no" onclick="goToScreen('screen-error-6')">Ignorer 🙈</button>
+      </div>
+    </div>
+
+    <!-- ÉCRAN 13 (Piège 6) -->
+    <div id="screen-error-6" class="screen">
+      <h1 class="title">Mauvais choix ! ❌</h1>
+      <p class="subtitle">Il faut tout lire😎 !</p>
+      <div class="button-group">
+        <button class="btn btn-yes" onclick="goToScreen('screen-bien')">Continuer ➡️</button>
+      </div>
+    </div>
+
+    <!-- ÉCRAN 14 : Grandis bien -->
+    <div id="screen-bien" class="screen">
+      <h1 class="title">Une sage décision... 🌟</h1>
+      <p class="subtitle">Alors grandis, mais surtout grandis bien.</p>
+      <div class="button-group">
+        <button class="btn btn-yes" onclick="goToScreen('screen-sourire')">Continuer ➡️</button>
+        <button class="btn btn-no" onclick="goToScreen('screen-error-7')">Ignorer 😒</button>
+      </div>
+    </div>
+
+    <!-- ÉCRAN 15 (Piège 7) -->
+    <div id="screen-error-7" class="screen">
+      <h1 class="title">Raté ! 🙃</h1>
+      <p class="subtitle">On ne zappe pas si vite !</p>
+      <div class="button-group">
+        <button class="btn btn-yes" onclick="goToScreen('screen-sourire')">Continuer ➡️</button>
+      </div>
+    </div>
+
+    <!-- ÉCRAN 16 : Le sourire -->
+    <div id="screen-sourire" class="screen">
+      <h1 class="title">😄</h1>
+      <p class="subtitle">Passe une année de plus avec le sourire. Continue de rêver mais accompli tes rêves 🌌.</p>
+      <div class="button-group">
+        <button class="btn btn-yes" onclick="goToScreen('screen-repete')">Continuer ➡️</button>
+        <button class="btn btn-no" onclick="goToScreen('screen-error-8')">Ignorer 😮‍💨</button>
+      </div>
+    </div>
+
+    <!-- ÉCRAN 17 (Piège 8) -->
+    <div id="screen-error-8" class="screen">
+      <h1 class="title">Presque fini ! 🎯</h1>
+      <p class="subtitle">Allez, encore un petit effort :</p>
+      <div class="button-group">
+        <button class="btn btn-yes" onclick="goToScreen('screen-repete')">Continuer ➡️</button>
+      </div>
+    </div>
+
+    <!-- ÉCRAN 18 : On te le répète -->
+    <div id="screen-repete" class="screen">
+      <h1 class="title">Une dernière fois... 🗣️</h1>
+      <p class="subtitle">Alors, on te le répète encore une fois.</p>
+      <div class="button-group">
+        <button class="btn btn-yes" onclick="goToScreen('screen-birthday')">Continuer 🎁</button>
+        <button class="btn btn-no" onclick="goToScreen('screen-error-9')">Ignorer 😤</button>
+      </div>
+    </div>
+
+    <!-- ÉCRAN 19 (Piège 9) -->
+    <div id="screen-error-9" class="screen">
+      <h1 class="title">C'est la dernière ligne droite ! 🏁</h1>
+      <p class="subtitle">Ne clique pas sur le faux bouton !</p>
+      <div class="button-group">
+        <button class="btn btn-yes" onclick="goToScreen('screen-birthday')">Continuer 🎁</button>
+      </div>
+    </div>
+
+    <!-- ÉCRAN 20 : Joyeux Anniversaire Mahery -->
+    <div id="screen-birthday" class="screen">
+      <h1 class="title-birthday">🎉 Joyeux Anniversaire Mahery ! 🎂</h1>
+      <p class="subtitle">Passe une année remplie de sourire, continue to. chemin, on te soutiendra. De la part de ta famille❤️! ✨</p>
+      
+      <div class="cake">
+        <div class="candle">
+          <div class="flame"></div>
+        </div>
+        <div class="frosting"></div>
+        <div class="layer"></div>
+      </div>
+
+      <button class="btn btn-yes" style="margin-top: 15px;" onclick="goToScreen('screen-plan-a')">Et n'oublie pas...</button>
+    </div>
+
+    <!-- ÉCRAN 21 : Page finale (Plan A de ta sœur) -->
+    <div id="screen-plan-a" class="screen">
+      <h1 class="title" style="color: #ff4757;">Dernière consigne ! 🤫</h1>
+      <p class="subtitle" style="font-size: 1.2rem; font-weight: bold; color: #2d3436;">
+        Grandis surtout bien pour le plan A de ta sœur 😘
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Relie ton fichier JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

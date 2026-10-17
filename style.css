@@ -1,0 +1,177 @@
+body {
+      margin: 0;
+        padding: 0;
+          display: flex;
+            justify-content: center;
+              align-items: center;
+                min-height: 100vh;
+                  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    overflow: hidden;
+                      transition: background 0.5s ease;
+}
+
+/* 🎨 Fonds de couleurs pour tous les écrans du parcours */
+body.bg-screen-1 { background: linear-gradient(135deg, #00b09b 0%, #96c93d 100%); }
+body.bg-screen-error-1 { background: linear-gradient(135deg, #f857a6 0%, #ff5858 100%); }
+body.bg-screen-special { background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%); }
+body.bg-screen-error-2 { background: linear-gradient(135deg, #e1eec3 0%, #f05053 100%); }
+body.bg-screen-mahery { background: linear-gradient(135deg, #4ea5d9 0%, #4460a0 100%); }
+body.bg-screen-error-3 { background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%); }
+body.bg-screen-vieillesse { background: linear-gradient(135deg, #654ea3 0%, #eaafc8 100%); }
+body.bg-screen-error-4 { background: linear-gradient(135deg, #ff9966 0%, #ff5e62 100%); }
+body.bg-screen-14ans { background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); }
+body.bg-screen-error-5 { background: linear-gradient(135deg, #f12711 0%, #f5af19 100%); }
+body.bg-screen-temps { background: linear-gradient(135deg, #b224ef 0%, #7579ff 100%); }
+body.bg-screen-grandis { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); }
+body.bg-screen-error-6 { background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%); }
+body.bg-screen-bien { background: linear-gradient(135deg, #fc4a1a 0%, #f7b733 100%); }
+body.bg-screen-error-7 { background: linear-gradient(135deg, #870000 0%, #190a05 100%); }
+body.bg-screen-sourire { background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%); }
+body.bg-screen-error-8 { background: linear-gradient(135deg, #7f00ff 0%, #e100ff 100%); }
+body.bg-screen-repete { background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%); }
+body.bg-screen-error-9 { background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 100%); }
+body.bg-screen-birthday { background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%); }
+body.bg-screen-plan-a { background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%); }
+
+.card {
+      background: white;
+        padding: 40px;
+          border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+              text-align: center;
+                max-width: 420px;
+                  width: 90%;
+                    position: relative;
+}
+
+/* Écrans */
+.screen {
+      display: none;
+        animation: fadeIn 0.4s ease-in-out forwards;
+}
+
+.screen.active {
+      display: block;
+}
+
+/* Textes */
+.title {
+      color: #2d3436;
+        font-size: 1.8rem;
+          margin-bottom: 10px;
+}
+
+.title-birthday {
+      color: #e84393;
+        font-size: 1.8rem;
+          margin-bottom: 15px;
+}
+
+.subtitle {
+      color: #636e72;
+        font-size: 1.1rem;
+          margin-bottom: 30px;
+            line-height: 1.5;
+}
+
+/* Boutons */
+.button-group {
+      display: flex;
+        flex-direction: column;
+          gap: 12px;
+}
+
+.btn {
+      border: none;
+        padding: 14px 20px;
+          font-size: 1rem;
+            font-weight: bold;
+              border-radius: 30px;
+                cursor: pointer;
+                  transition: transform 0.2s, background 0.3s;
+}
+
+.btn-yes {
+      background-color: #6c5ce7;
+        color: white;
+          box-shadow: 0 4px 12px rgba(108, 92, 231, 0.3);
+}
+
+.btn-yes:hover {
+      background-color: #5a4bcf;
+        transform: scale(1.03);
+}
+
+.btn-no {
+      background-color: #dfe6e9;
+        color: #636e72;
+}
+
+.btn-no:hover {
+      background-color: #b2bec3;
+        transform: scale(1.03);
+}
+
+/* Gâteau de fête */
+.cake {
+      position: relative;
+        width: 120px;
+          height: 90px;
+            margin: 10px auto 20px auto;
+}
+
+.layer {
+      position: absolute;
+        bottom: 0;
+          width: 100%;
+            height: 60px;
+              background-color: #fd79a8;
+                border-radius: 12px 12px 0 0;
+}
+
+.frosting {
+      position: absolute;
+        top: 18px;
+          width: 100%;
+            height: 20px;
+              background-color: #ffeaa7;
+                border-radius: 10px;
+                  z-index: 2;
+}
+
+.candle {
+      position: absolute;
+        top: -20px;
+          left: 50%;
+            transform: translateX(-50%);
+              width: 12px;
+                height: 30px;
+                  background-color: #74b9ff;
+                    border-radius: 6px;
+                      z-index: 3;
+}
+
+.flame {
+      position: absolute;
+        top: -14px;
+          left: 50%;
+            transform: translateX(-50%);
+              width: 12px;
+                height: 18px;
+                  background-color: #fdcb6e;
+                    border-radius: 50% 50% 20% 20%;
+                      box-shadow: 0 0 10px #fdcb6e, 0 0 20px #e17055;
+                        animation: flicker 0.8s infinite alternate;
+}
+
+/* Animations */
+@keyframes flicker {
+      0% { transform: translateX(-50%) scale(1); opacity: 0.9; }
+        100% { transform: translateX(-50%) scale(1.15); opacity: 1; }
+}
+
+@keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+        to { opacity: 1; transform: translateY(0); }
+}
+
